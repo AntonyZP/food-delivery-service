@@ -1,0 +1,46 @@
+.hero__slider {
+  position: absolute;
+  display: none;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet) {
+    right: 32px;
+    bottom: -73px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    right: 16px;
+    bottom: -150px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+
+    width: 336px;
+    height: 320px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 608px;
+    height: 580px;
+  }
+}
+
+.slider__img-wrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  width: 320px;
+  height: 320px;
+
+  background: $color-input-background;
+  border: 14px solid $color-main-theme;
+  border-radius: 50%;
+
+  @media screen and (min-width: $desktop) {
+    width: 580px;
+    height: 580px;
+
+    border: 26px solid $color-main-theme;
+  }
+}

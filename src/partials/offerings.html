@@ -1,0 +1,70 @@
+<section class="offerings" id="offerings">
+  <div class="container offerings__container">
+    <div class="offerings__thumb">
+      <picture>
+        <!-- desktop screen -->
+        <source
+          media="(min-width: 1280px)"
+          srcset="./images/offerings/appleBg-desk-550@1x.webp 1x, ./images/offerings/appleBg-desk-1100@2x.webp 2x"
+          type="image/webp"
+          width="550"
+          height="607"
+        />
+        <!-- tablet screen -->
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/offerings/appleBg-tabl-704@1x.webp 1x, ./images/offerings/appleBg-tabl-1408@2x.webp 2x"
+          type="image/webp"
+          width="704"
+          height="394"
+        />
+        <!-- mobile screen -->
+        <source
+          media="(max-width: 767px)"
+          srcset="./images/offerings/appleBg-mob-280@1x.webp 1x, ./images/offerings/appleBg-mob-560@2x.webp 2x"
+          type="image/webp"
+          width="280"
+          height="309"
+        />
+        <!-- fallback -->
+        <img src="./images/offerings/appleBg-desk-550@1x.webp" alt="Green apple" />
+      </picture>
+    </div>
+    <div class="offerings__decor-container">
+      <div class="offerings__about">
+        <h2 class="offerings__about__title">What’s Special About Our Offerings</h2>
+        <p class="offerings__about__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+      </div>
+      <div class="offerings__benefits">
+        <ul class="offerings__benefits__list">
+          <li class="offerings__benefits__item">
+            <svg class="offerings__benefits-icon" width="48" height="48">
+              <use href="./images/icon.svg#delivery"></use>
+            </svg>
+            <h3 class="offerings__benefits__title">Fastest Delivery</h3>
+            <p class="offerings__benefits__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+          </li>
+          <li class="offerings__benefits__item">
+            <svg width="48" height="48" class="offerings__benefits-icon">
+              <use href="./images/icon.svg#order"></use>
+            </svg>
+            <h3 class="offerings__benefits__title">Easy to order</h3>
+            <p class="offerings__benefits__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="offerings__under">
+        <button class="offerings__under__btn" type="button" data-modal-open2>Order Now</button>
+        <a class="offerings__under__link" href=""
+          >Read More
+          <svg class="offerings__under__icon" width="14" height="14">
+            <use href="./images/icon.svg#small-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

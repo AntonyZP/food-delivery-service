@@ -1,0 +1,474 @@
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  opacity: 1;
+
+  background-color: $color-modal-overlay;
+  backdrop-filter: blur(5px);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity $timing-function-trans-duration;
+
+  & .backdrop__modal {
+    transform: translate(50%, 0%);
+  }
+}
+
+// MODAL-1
+
+.backdrop__modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  text-align: center;
+
+  transform: translate(-50%, 0%);
+  transition: transform $timing-function-trans-duration-for-modal;
+
+  background-image: url('../images/modal/modal-bg.svg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 30px;
+  box-shadow: $shadow-modal;
+}
+
+.backdrop__modal.is-close {
+  transform: translate(-250%, 0%);
+}
+
+.order__wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.order__title {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 50px;
+}
+
+.order__form {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.dish__name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 10px;
+
+  background-image: url('../images/modal/bg.svg');
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: center;
+}
+
+.dish__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dish-background;
+  border: 3px solid $color-input-label;
+  border-radius: 20%;
+  text-align: center;
+
+  transition: background-color $timing-function-trans-duration;
+
+  &.checked {
+    background-color: $color-accent;
+  }
+}
+
+.dish__price {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  padding-top: 20px;
+
+  font-style: italic;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: $color-price;
+  background-image: url('../images/modal/bg-price.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.menu {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.menu__item {
+  padding-bottom: 25px;
+  width: 300px;
+
+  border-bottom: 3px solid $color-input-label;
+  border-radius: 10%;
+}
+
+.checkbox__label {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox__wrapper {
+  position: absolute;
+  top: 0;
+  right: -20px;
+}
+
+.checkbox__custom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+  color: transparent;
+  background-color: $color-background;
+  border: 3px solid $color-input-label;
+  border-radius: 30px;
+
+  transition: color $timing-function-trans-duration, background-color $timing-function-trans-duration, border-color $timing-function-trans-duration;
+
+  .checkbox:checked + & {
+    background-color: $color-accent;
+    color: $color-border-btn-active;
+    border: 3px solid $color-border-btn-active;
+  }
+}
+
+.checkbox__custom-icon {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  fill: currentColor;
+}
+
+.quantity__field {
+  opacity: 0;
+
+  transition: opacity $timing-function-trans-duration;
+
+  &.available {
+    opacity: 1;
+  }
+}
+
+.quantity {
+  width: 100px;
+  height: 50px;
+  margin-top: 25px;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-bottom: 12px;
+  padding-right: 10px;
+  text-align: center;
+
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: $color-primary-text;
+  background-color: $color-background;
+  border: 3px solid $color-input-label;
+  border-radius: 30px;
+  outline: transparent;
+}
+
+// MODAL-2
+.backdrop__modal2 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  max-width: 800px;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  padding-top: 80px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  text-align: center;
+  transform: translate(200vw, 0%);
+
+  transition: transform $timing-function-trans-duration-for-modal2;
+
+  background-image: url('../images/modal/modal-bg.svg');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 30px;
+  box-shadow: $shadow-modal;
+
+  &.is-open {
+    transform: translate(-50%, 0%);
+  }
+}
+
+.pay-delivery__title {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 700px;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 50px;
+}
+
+.pay-delivery__wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.delivery__section {
+  @extend %list;
+}
+
+.payment__title-wrapper,
+.delivery__title-wrapper {
+  width: 100%;
+}
+
+.delivery__title,
+.payment__title {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-style: italic;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 30px;
+
+  background-image: url('../images/modal/bg.svg');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+.payment__section {
+  margin-bottom: 70px;
+}
+
+.payment__form {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 10px;
+
+  background-color: $color-primary-text;
+  border: 3px solid $color-primary-text;
+  border-radius: 30px;
+}
+
+.payment__method {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.radio__label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  cursor: pointer;
+
+  background-color: $color-main-theme;
+  border: 3px solid $color-primary-text;
+  border-radius: 30px;
+}
+
+.radio_wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.card {
+  padding: 5px;
+  background-color: $color-primary-text;
+  border-radius: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.radio__custom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+
+  color: transparent;
+  background-color: $color-background;
+  border: 3px solid $color-input-label;
+  border-radius: 30px;
+
+  transition: color $timing-function-trans-duration, background-color $timing-function-trans-duration, border-color $timing-function-trans-duration;
+}
+
+.radio__custom-icon {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  fill: currentColor;
+}
+
+.radio__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio:checked + .radio__custom {
+  background-color: $color-accent;
+  color: $color-border-btn-active;
+  border: 5px solid $color-border-btn-active;
+}
+
+.delivery__form {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+
+  & .validation-alert {
+    padding-left: 10px;
+
+    font-size: 13px;
+    line-height: calc(18 / 13);
+  }
+}
+
+.delivery__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 14);
+
+  pointer-events: none;
+
+  color: $color-placeholder;
+
+  .subscription__input:not(:placeholder-shown) + & {
+    opacity: 0;
+  }
+}
+
+.delivery__input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 42px;
+  padding-top: 14px;
+  padding-left: 16px;
+  padding-bottom: 14px;
+  padding-right: 11px;
+  margin-right: auto;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(20 / 14);
+
+  color: $color-primary-text;
+  background-color: $color-input-background;
+
+  border: 0.85px solid $color-border-btn;
+  border-radius: 30px;
+  outline: transparent;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:not(:placeholder-shown) + .delivery__label {
+    opacity: 0;
+  }
+
+  &:not(:placeholder-shown):required:valid {
+    border-color: $color-border-btn;
+    background-color: $color-input-background;
+  }
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: $color-warning;
+  }
+
+  &:not(:placeholder-shown):required:invalid ~ .validation-alert {
+    opacity: 1;
+  }
+}
+
+.delivery__address {
+  max-width: 600px;
+}
+
+.delivery__information {
+  margin-bottom: 2px;
+  padding-left: 16px;
+  text-align: left;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(22 / 16);
+
+  color: $color-primary-text;
+}

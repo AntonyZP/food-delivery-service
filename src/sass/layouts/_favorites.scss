@@ -1,0 +1,118 @@
+.favorites {
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.favorites__title {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(28 / 33);
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  color: $color-primary-text;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 42px;
+    line-height: calc(49 / 42);
+  }
+}
+
+.favorites__text {
+  font-family: $font-text;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+
+  color: $color-primary-text;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: calc(16 / 19);
+  }
+}
+
+.favorites__description {
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 40px;
+  }
+}
+
+.favorites__list {
+  @extend %list;
+
+  justify-content: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 32px;
+  }
+}
+
+.favorites__photo {
+  padding: 19px;
+  border: 11px solid $color-main-theme;
+  border-radius: 140px;
+
+  flex-basis: calc((100% - 0 * 32px) / 1);
+
+  transition: border $timing-function-trans-duration;
+
+  &:hover,
+  &:focus {
+    border: 11px solid $color-accent;
+  }
+
+  @media screen and (max-width: 767px) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 21px;
+    border: 14px solid $color-main-theme;
+    border-radius: 167px;
+
+    flex-basis: calc((100% - 1 * 32px) / 2);
+
+    &:hover,
+    &:focus {
+      border: 14px solid $color-accent;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 24px;
+    border: 16px solid $color-main-theme;
+    border-radius: 197px;
+
+    flex-basis: calc((100% - 2 * 32px) / 3);
+
+    &:hover,
+    &:focus {
+      border: 16px solid $color-accent;
+    }
+  }
+}

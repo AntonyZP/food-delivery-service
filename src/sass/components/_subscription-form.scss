@@ -1,0 +1,97 @@
+.subscription__form {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
+
+.subscription__field {
+  position: relative;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+    margin-right: 18px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 32px;
+  }
+}
+
+.subscription__label {
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(18 / 12);
+
+  color: $color-input-label;
+
+  pointer-events: none;
+
+  .subscription__input:not(:placeholder-shown) + & {
+    opacity: 0;
+  }
+}
+
+.subscription__input {
+  width: 100%;
+  height: 42px;
+  padding-top: 12px;
+  padding-left: 11px;
+  padding-bottom: 12px;
+  padding-right: 11px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(18 / 12);
+
+  color: $color-primary-text;
+  background-color: $color-input-background;
+
+  border: 0.85px solid $color-main-theme;
+  border-radius: 30px;
+  outline: transparent;
+
+  @media screen and (min-width: $tablet) {
+    width: 394px;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:not(:placeholder-shown):required:valid {
+    border-color: $color-border-btn;
+    background-color: $color-input-background;
+  }
+
+  &:not(:placeholder-shown):required:invalid {
+    border-color: $color-warning;
+  }
+
+  &:not(:placeholder-shown):required:invalid ~ .validation-alert {
+    opacity: 1;
+  }
+}
+
+.validation-alert__icon {
+  margin-right: 4px;
+}
+
+.validation-alert {
+  position: absolute;
+  top: 46px;
+  display: flex;
+  align-items: center;
+
+  font-size: 10px;
+  line-height: calc(15 / 10);
+
+  color: $color-warning;
+
+  opacity: 0;
+}

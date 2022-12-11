@@ -1,0 +1,64 @@
+%link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%button {
+  display: block;
+  padding-top: 6px;
+  padding-right: 17px;
+  padding-bottom: 5px;
+  padding-left: 17px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(21 / 14);
+  text-align: center;
+
+  color: $color-primary-text;
+
+  border: none;
+  background-color: $color-accent;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+%slider-button {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 34px;
+  height: 28px;
+
+  background-color: $color-input-background;
+  fill: $color-primary-text;
+
+  box-shadow: $shadow-slider-arrow-defaul-or-hover;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: $color-border-btn;
+  }
+
+  &:active {
+    fill: $color-primary-text;
+    box-shadow: $shadow-slider-arrow-click;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 48px;
+    height: 40px;
+
+    border-radius: 8px;
+  }
+}

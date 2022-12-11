@@ -1,0 +1,63 @@
+<section class="hero" id="hero">
+  <div class="container hero_container">
+    <div class="hero__content-wrapper">
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <button class="hero__btn" type="button" data-modal-open1>Order Now</button>
+    </div>
+    <div class="hero__slider">
+      <svg class="hero__slider-btn--left swiper-button-prev" aria-label="previous slide">
+        <use href="./images/icon.svg#leftArrow"></use>
+      </svg>
+      <svg class="hero__slider-btn--right swiper-button-next" aria-label="next slide">
+        <use href="./images/icon.svg#rightArrow"></use>
+      </svg>
+      <div class="slider__img-wrapper swiper">
+        <div class="swiper-wrapper">
+          <picture class="swiper-slide">
+            <source
+              srcset="
+                ./images/hero/slide1-desk-528@1x.webp   528w,
+                ./images/hero/slide1-desk-1056@2x.webp 1056w,
+                ./images/hero/slide1-tabl-292@1x.webp   292w,
+                ./images/hero/slide1-tabl-584@2x.webp   584w
+              "
+              sizes="(min-width: 1200px) 528px, (min-width: 768px) 292px"
+              type="image/webp"
+            />
+            <img src="./images/hero/slide1-tabl-292@1x.webp" alt="Falafel" width="528" height="528" />
+          </picture>
+          <picture class="swiper-slide">
+            <source
+              srcset="
+                ./images/hero/slide2-desk-528@1x.webp   528w,
+                ./images/hero/slide2-desk-1056@2x.webp 1056w,
+                ./images/hero/slide2-tabl-292@1x.webp   292w,
+                ./images/hero/slide2-tabl-584@2x.webp   584w
+              "
+              sizes="(min-width: 1200px) 528px, (min-width: 768px) 292px"
+              type="image/webp"
+            />
+            <img src="./images/hero/slide2-tabl-292@1x.webp" alt="Greek salad" width="528" height="528" />
+          </picture>
+          <picture class="swiper-slide">
+            <source
+              srcset="
+                ./images/hero/slide3-desk-528@1x.webp   528w,
+                ./images/hero/slide3-desk-1056@2x.webp 1056w,
+                ./images/hero/slide3-tabl-292@1x.webp   292w,
+                ./images/hero/slide3-tabl-584@2x.webp   584w
+              "
+              sizes="(min-width: 1200px) 528px, (min-width: 768px) 292px"
+              type="image/webp"
+            />
+            <img src="./images/hero/slide3-tabl-292@1x.webp" alt="Poached Eggs" width="528" height="528" />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

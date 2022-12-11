@@ -1,0 +1,45 @@
+.header__link.animated {
+  animation-name: logo;
+  animation-duration: 3000ms;
+  animation-timing-function: $timing-function-animation;
+
+  animation-iteration-count: 1;
+}
+
+@keyframes logo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(2160deg);
+  }
+}
+
+@keyframes discount {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(290px);
+  }
+  100% {
+    transform: translateX(290px);
+  }
+}
+
+.discount {
+  position: absolute;
+  left: -280px;
+  top: 5px;
+  font-size: 16px;
+  font-weight: 700;
+
+  &.animated {
+    animation-name: discount;
+    animation-duration: 4000ms;
+    animation-timing-function: $timing-function-animation;
+    animation-iteration-count: 1;
+    animation-delay: 2500ms;
+  }
+}

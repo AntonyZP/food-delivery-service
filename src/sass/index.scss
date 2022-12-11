@@ -1,0 +1,34 @@
+// UTIL STYLES
+@import './utils/variables';
+// @import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/visually-hidden';
+@import './utils/animation';
+
+// BASE STYLES
+@import './base/common';
+@import './base/reset';
+@import './base/base';
+
+// COMPONENTS STYLES
+@import './components/section';
+@import './components/container';
+@import './components/benefits';
+@import './components/buttons';
+@import './components/cards-review';
+@import './components/food-set';
+@import './components/logo';
+@import './components/mob-menu';
+@import './components/navigation';
+@import './components/slider';
+@import './components/subscription-form';
+
+// LAYOUTS STYLES
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/customers-say';
+@import './layouts/favorites';
+@import './layouts/footer';
+@import './layouts/offerings';
+@import './layouts/subscribe';
+@import './layouts/modal';

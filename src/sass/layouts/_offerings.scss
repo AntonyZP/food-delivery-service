@@ -1,0 +1,204 @@
+.offerings {
+  padding-top: 41px;
+  padding-bottom: 60px;
+
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+
+  background-image: url(../images/offerings/offeringsBg-mob.svg);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/offerings/offeringsBg-mob.svg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-top: -108px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    background-image: url(../images/offerings/offeringsBg-tabl.svg);
+
+    background-size: 100%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/offerings/offeringsBg-tabl.svg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: -161px;
+    padding-top: 177px;
+    padding-bottom: 43px;
+
+    background-image: url(../images/offerings/offeringsBg-desk.svg);
+
+    background-size: 100%;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/offerings/offeringsBg-desk.svg);
+    }
+  }
+}
+
+.offerings__container {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
+}
+
+.offerings__thumb {
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: ($desktop - 0.02px)) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 90px;
+    min-width: 550px;
+  }
+}
+
+.offerings__decor-container {
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 57px;
+    padding-top: 83px;
+  }
+}
+
+.offerings__about {
+  @media screen and (min-width: $tablet) {
+    margin-right: 210px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.offerings__about__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.166;
+
+  margin-bottom: 28px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 20px;
+    font-size: 42px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.offerings__about__text {
+  margin-bottom: 28px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+
+    width: 500px;
+  }
+}
+
+.offerings__benefits {
+  margin-bottom: 28px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.offerings__benefits__list {
+  @extend %list;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 116px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 67px;
+  }
+}
+
+.offerings__benefits__item {
+  @media screen and (max-width: ($tablet - 0.02px)) {
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 252px;
+  }
+}
+
+.offerings__benefits-icon {
+  margin-bottom: 8px;
+}
+
+.offerings__benefits__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.16;
+
+  margin-bottom: 16px;
+}
+
+.offerings__benefits__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+}
+
+.offerings__under {
+  display: flex;
+}
+
+.offerings__under__link {
+  @extend %link;
+
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-self: center;
+  margin-left: 24px;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.offerings__under__icon {
+  align-self: center;
+  margin-left: 3px;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
